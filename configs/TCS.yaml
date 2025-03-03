@@ -8,7 +8,7 @@ pages:
     - type: spatial
       id : test_page
       name: Localization of a stimulus
-      content: lia!
+      content: Test
       framerate: 5
       roomMeasurements: [600, 240, 500] # width, height, length
       stimuli:
@@ -25,46 +25,20 @@ pages:
         - view: front
       objects: 
         - type: None
-    - type: spatial
-      id : test_page
-      name: Localization of a stimulus
-      content: lia!
-      framerate: 5
-      roomMeasurements: [600, 240, 500] # width, height, length
-      stimuli:
-          C1: configs/resources/audio/mono_c1.wav
-      responses:
-        - type: localization
-          name: locA
-          label: A
-          color: 0xff0000
-          stimulus: C1
-          position: [100,100,0]
-          size: 10
-      views: 
-        - view: front
-      objects: 
-        - type: None
-    - type: spatial
-      id : test_page
-      name: Localization of a stimulus
-      content: lia!
-      framerate: 5
-      roomMeasurements: [600, 240, 500] # width, height, length
-      stimuli:
-          C1: configs/resources/audio/mono_c1.wav
-      responses:
-        - type: localization
-          name: locA
-          label: A
-          color: 0xff0000
-          stimulus: C1
-          position: [100,100,0]
-          size: 10
-      views: 
-        - view: front
-      objects: 
-        - type: None
+        
+    # - type: mushra
+    #   id: trial1
+    #   name: MUSHRA
+    #   content: This training shows how to use our user interface. Please perform the underlined instructions to proceed with the training session. Reminder: In a MUSHRA listening test you are asked to rate the Basic Audio Quality (BAQ) of each condition.<br/>Basic Audio Quality is a single and global attribute that is used to judge any and all detected differences between the reference and the condition.
+    #   showWaveform: true
+    #   enableLooping: true 
+    #   reference: configs/resources/audio/mono_ref.wav
+    #   createAnchor35: true
+    #   createAnchor70: true
+    #   stimuli:
+    #       C1: configs/resources/audio/mono_c1.wav
+    #       C2: configs/resources/audio/mono_c2.wav
+    #       C3: configs/resources/audio/mono_c3.wav
     - type: finish
       name: Thank you
       content: Thank you for attending
