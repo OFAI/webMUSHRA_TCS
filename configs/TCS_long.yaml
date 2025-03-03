@@ -1,0 +1,628 @@
+testname: Localization test
+testId: spatial
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+    # - type: generic
+    #   id: first_page
+    #   name: Welcome
+    #   content: This is an example test for the evaluation of spatial attributes. On the following pages you will find examples for the evaluation of: <ul><li>Apparent/Auditory Source Width (ASW)</li><li>Listener's Envelopment (LEV)</li><li>Height, width and depth of a stimulus</li><li>Localization of sound sources</li></ul> The test will also give you an overview of the different views that can be used. </br>On the last page will be a short questionnaire to get to know some properties about the participant.</br></br>Push the 'NEXT'-Button to start with this example experiment!
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: finish
+      name: Thank you
+      content: Thank you for attending
+      showResults: false
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: name/shortname/nickname
+            name: email
+          # - type: number
+          #   label: Age
+          #   name: age
+          #   min: 0
+          #   max: 100
+          #   default: 30
+          # - type: likert
+          #   name: gender
+          #   label: Gender
+          #   response:
+          #    - value: female
+          #      label: Female
+          #    - value: male
+          #      label: Male
+          #    - value: other
+          #      label: Other
+          # - type: likert
+          #   name: expert_timbre
+          #   label: Are you an expert listener in judging timbre? 
+          #   response:
+          #    - value: no
+          #      label: No
+          #    - value: yes
+          #      label: Yes
+          # - type: likert
+          #   name: expert_spatial
+          #   label: Are you an expert listener in spatial audio? 
+          #   response:
+          #    - value: no
+          #      label: No
+          #    - value: yes
+          #      label: Yes
+          # - type: likert
+          #   name: listening_test_experience
+          #   label: Have you taken part in a listening test about spatial attributes yet? 
+          #   response:
+          #    - value: no
+          #      label: No
+          #    - value: yes
+          #      label: Yes
+          # - type: likert
+          #   name: professional
+          #   label: Do you have a background in professional audio (e.g. sound/recording engineer, researcher)? 
+          #   response:
+          #    - value: no
+          #      label: No
+          #    - value: yes
+          #      label: Yes

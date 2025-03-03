@@ -1,0 +1,76 @@
+testname: Localization test
+testId: spatial
+bufferSize: 2048
+stopOnErrors: false
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: lia!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: lia!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: spatial
+      id : test_page
+      name: Localization of a stimulus
+      content: lia!
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      stimuli:
+          C1: configs/resources/audio/mono_c1.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    - type: finish
+      name: Thank you
+      content: Thank you for attending
+      showResults: false
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: name/shortname/nickname
+            name: email
