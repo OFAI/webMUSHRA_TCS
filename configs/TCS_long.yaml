@@ -12,7 +12,7 @@ pages:
     - type: spatial
       id : test_page
       name: Localization of a stimulus
-      content: Now you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
+      content: Noww you have to locate different stimuli. Play back a stimulus and place the spheres, with the colors of the buttons in the according box with the player, to the positions where you perceive sound sources. The number of spheres should fit the number of perceived sound sources and it is not important which sphere represents which sound source. Place the spheres simply by clicking into the scene (here you can also use the 3D view to place the spheres)!
       framerate: 5
       roomMeasurements: [600, 240, 500] # width, height, length
       stimuli:
