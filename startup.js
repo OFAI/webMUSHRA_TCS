@@ -86,7 +86,7 @@ function addPagesToPageManager(_pageManager, _pages) {
         var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
         _pageManager.addPage(mushraPage);
       } else if ( pageConfig.type == "spatial"){
-        _pageManager.addPage(new SpatialPage(_pageManager, pageConfig, session, audioContext, config.bufferSize, audioFileLoader, errorHandler, config.language));
+        _pageManager.addPage(new SpatialPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language));
       } else if (pageConfig.type == "paired_comparison") {
         var pcPageManager = new PairedComparisonPageManager();
         pcPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
@@ -221,11 +221,12 @@ function getParameterByName(name) {
 
 var config = null;
 var configArg = getParameterByName("config");
+// var configArg = "TCS.yaml";
 var configFile = '';
 if (configArg) {
   configFile = 'configs/' + configArg;
 } else {
-  configFile = 'configs/default.yaml';
+  configFile = 'configs/TCS.yaml';
 }
 
 

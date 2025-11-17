@@ -14,6 +14,8 @@ Listening tests are widely used to assess the quality of audio systems. In the l
 
 ##### [View Demo](https://audiolabs.github.io/webMUSHRA)
 
+## Info for changes:
+Set the desired background color for page_content in design/jquery.mobile-theme/themes/default/alabs_0_3.css
 
 ### Download
 
