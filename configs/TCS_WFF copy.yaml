@@ -1,0 +1,313 @@
+testname: DialektDetect
+testId: spatial
+bufferSize: 2048
+language: de
+stopOnErrors: false
+showButtonPreviousPage: true
+remoteService: service/write.php
+pages:
+    - type: generic
+      id: welcome_page0
+      name: <div style="font-size: 58px;"><b>Wilkommen bei DialektDetect!</b> </div>
+      content: |
+        <div style="font-size: 36px;"><b>
+        Kannst du die richtigen Dialekte zuordnen?</b></div>
+    - type: generic
+      id: welcome_page1
+      name: <div style="font-size: 48px;"><b>KI und Dialekt?</b> </div>
+      content: |
+        <div style="font-size: 36px;">
+        Wir haben eine <b>Künstliche Intelligenz (KI)</b> darauf trainiert, Dialekte zu erkennen.<br>
+        Wenn wir ihr eine Audioaufnahme vorspielen, kann sie uns sagen, woher eine Person kommt.<br></div>
+    - type: generic
+      id: welcome_page2
+      name: <div style="font-size: 48px;"><b>Dialekte in Österreich</b> </div>
+      content: |
+        <div style="font-size: 36px;">Österreichische Dialekte können sehr unterschiedlich sein,<br>
+        aber es gibt eine grobe Unterteilung in <b>6 Dialektgruppen</b>:</div>
+    - type: volume
+      id: welcome_page3
+      name: <div style="font-size: 48px;"><b>Dialekterkennung mit KI</b> </div>
+      content: |
+        <div style="font-size: 36px;">Die Erkennung funktioniert aber auch <b>nicht immer korrekt</b>.<br>
+        Hier sieht man die korrekte Antwort und die Antwort der KI:<br> </div>
+      stimulus: configs/resources/audio/DialektDetect/listening_test_wavs/50618_HG_WJ_010.01_2.wav
+      defaultVolume: 1.0
+    - type: generic
+      id: welcome_page4
+      name: <div style="font-size: 48px;"><b>Dialektquiz</b> </div>
+      content: |
+        <div style="font-size: 36px;">Also wie gut ist unsere KI, und wie gut bist du dabei?<br>
+        <b>Willst du sie zu einem Duell herausfordern?</b> </div>
+
+    - type: spatial
+      id: 90001_HP_MA_artmann_00140
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/90001_HP_MA_artmann_00140.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/90001_HP_MA_artmann_00140.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 70710_BS_WA_ivg_553
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/70710_BS_WA_ivg_553.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/70710_BS_WA_ivg_553.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+
+    - type: spatial
+      id: 80105_BR_MA_499.01
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/80105_BR_MA_499.01.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/80105_BR_MA_499.01.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 61254_AI_MJ_057.01_5
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/61254_AI_MJ_057.01_5.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/61254_AI_MJ_057.01_5.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 20619_ML_WJ_493.01
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/20619_ML_WJ_493.01.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/20619_ML_WJ_493.01.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 32002_GY_MJ_010.01_0
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/32002_GY_MJ_010.01_0.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/32002_GY_MJ_010.01_0.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 40410_GW_WJ_482.01
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/40410_GW_WJ_482.01.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/40410_GW_WJ_482.01.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 70804_BI_WA_567.01
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/70804_BI_WA_567.01.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/70804_BI_WA_567.01.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 10612_SF_WA_553.01
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/10612_SF_WA_553.01.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/10612_SF_WA_553.01.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    - type: spatial
+      id: 61756_FA_MA_329.01
+      name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+      content: <div style="font-size: 32px;">Suche dir eine Farbe aus und hör' dir das Beispiel an.
+      framerate: 5
+      roomMeasurements: [600, 240, 500] # width, height, length
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/audio/DialektDetect/listening_test_wavs/61756_FA_MA_329.01.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/61756_FA_MA_329.01.wav
+      responses:
+        - type: localization
+          name: locA
+          label: A
+          color: 0xff0000
+          stimulus: C1
+          position: [100,100,0]
+          size: 10
+      views: 
+        - view: front
+      objects: 
+        - type: None
+    
+    
+    - type: finish
+      name: <div style="font-size: 48px;"><b>Danke fürs Mitmachen!</b> </div>
+      content: |
+        <div style="font-size: 36px;">Wir hoffen, es hat dir Spaß gemacht!<br></div>
+      showResults: false
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: Name
+            name: name

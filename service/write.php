@@ -337,6 +337,50 @@ if ($write_spatial_localization) {
     fclose($fp);
 }
 
+//spatial_2d
+$write_spatial_2d = false;
+$spatial_spatial2dData = array();
+
+$input = array("session_test_id");
+for ($i = 0; $i < $length; $i++) {
+  array_push($input, $session->participant->name[$i]);
+}
+array_push($input,  "trial_id", "name", "stimulus", "position_x", "position_y", "audio_loop_start", "audio_loop_end");
+array_push($spatial_spatial2dData, $input);
+
+
+// 
+foreach ($session->trials as $trial) {
+
+  if ($trial->type == "spatial_2d") {
+
+    foreach ($trial->responses as $response) {
+      $write_spatial_2d = true;
+
+      $results = array($session->testId);
+      for ($i = 0; $i < $length; $i++) {
+        array_push($results, $session->participant->response[$i]);
+      }
+      array_push($results, $trial->id, $response->name, $response->stimulus, $response->position[0], $response->position[1], $response->position[2], $response->position[3]);
+      array_push($spatial_spatial2dData, $results);
+    }
+  }
+}
+
+if ($write_spatial_2d) {
+  $filename = $filepathPrefix . "spatial_2d" . $filepathPostfix;
+  $isFile = is_file($filename);
+  $fp = fopen($filename, 'a');
+  foreach ($spatial_spatial2dData as $row) {
+    if ($isFile) {
+      $isFile = false;
+    } else {
+      fputcsv($fp, $row);
+    }
+  }
+  fclose($fp);
+}
+
 //asw
 $write_spatial_asw = false;
 $spatial_aswData = array();

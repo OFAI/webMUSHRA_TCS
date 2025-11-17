@@ -1,0 +1,556 @@
+testname: DialektDetect
+testId: spatial
+bufferSize: 2048
+language: de
+stopOnErrors: false
+showButtonPreviousPage: true
+remoteService: service/write.php
+pages:
+    - type: generic
+      id: welcome_page0
+      name: <div style="font-size: 58px;"><b>Wilkommen bei DialektDetect!</b> </div>
+      content: |
+        <div style="font-size: 36px;"><b>
+        Kannst du die richtigen Dialekte zuordnen?</b><br>
+        # Wenn du vorher noch etwas üben möchtest, klick auf diesen <a href="https://lorgu.github.io/dialekt-map/" target="_blank">Link</a>.</div>
+    # - type: consent
+    #   id: consent_page
+    #   name: Einverständniserklärung
+    #   mustConsent: true
+    #   content: |
+    #     <p>In diesem Experiment hörst du kurze Sprachaufnahmen und sollst bestimmen, woher aus Österreich die sprechende Person kommt.
+    #     Die gesammelten Daten helfen uns zu erforschen, wie gut die Dialekte in Österreich erkannt werden.<br>
+    #     Die Ergebnisse werden im Rahmen eines Forschungsprojekts anonymisiert ausgewertet und können in wissenschaftlichen Publikationen veröffentlicht werden.<br>
+    #     Dein Name wird niemals öffentlich angezeigt oder weitergegeben.<br>
+    #     Bei Fragen oder Problemen, schreibe eine Mail an <a href="mailto:lorenz.gutscher@ofai.at">lorenz.gutscher@ofai.at</a>.</p>
+    - type: generic
+      id: welcome_page2
+      name: <div style="font-size: 48px;"><b>Dialekte in Österreich</b> </div>
+      content: |
+        <div style="font-size: 36px;">Österreichische Dialekte können sehr unterschiedlich sein.<br>
+        Im Westen (Vorarlberg) wird <b>Alemannisch</b> gesprochen, östlich davon <b>Bairisch</b>.<br>
+        # In disem Bild siehst du eine noch genauere Unterteilung in <b>6 Dialektgruppen</b>:<br>
+        </div>
+    - type: generic
+      id: welcome_page1
+      name: <div style="font-size: 38px;"><b>KI und Dialekt?</b> </div>
+      content: |
+        <div style="font-size: 28px;">
+        Wir haben eine <b>Künstliche Intelligenz (KI)</b> darauf trainiert, Dialekte zu erkennen.<br>
+        Wir haben für das Training Aufnahmen von über 300 Personen aus 108 Ortschaften in ganz Österreich verwendet:<br>
+    - type: volume
+      id: welcome_page3
+      name: <div style="font-size: 48px;"><b>Dialekterkennung mit KI</b> </div>
+      content: |
+        <div style="font-size: 28px;">Wenn wir der KI jetzt eine Audioaufnahme vorspielen, zeigt diese den Ort an,
+        wo die Person (laut KI) herkommen könnte.<br>
+        Die KI gibt ihr Bestes, aber trotzdem funktioniert die <b>Erkennung</b> der KI <b>nicht immer korrekt</b>.<br>
+        Hier sieht man die <b>korrekte Antwort</b> (grüner Punkt). Salzburg. Und die <b>Antwort der KI</b> (blaues Dreick). Oberösterreich:<br> </div>
+      stimulus: configs/resources/audio/DialektDetect/listening_test_wavs/50618_HG_WJ_010.01_2.wav
+      defaultVolume: 1.0
+    - type: likert_single_stimulus
+      id: lss3
+      name: likert
+      content: <div style="font-size: 26px;">Hör dir das Beispiel an! Aus welchem Bundesland kommt die sprechende Person?</div>
+      showWaveform: false
+      # mustPlayback: ended
+      mustRate: true
+      randomize: false
+      maxStimuli: 1
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/32002_GY_MJ_010.01_0.wav
+      response:
+        -
+          - value: vorarlberg
+            label: Vorarlberg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: tirol
+            label: Tirol
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: salzburg
+            label: Salzburg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: kärnten
+            label: Kärnten
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: steiermark
+            label: Steiermark
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: niederösterreich
+            label: Niederösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: oberösterreich
+            label: Oberösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: burgenland
+            label: Burgenland
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: wien
+            label: Wien
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+    - type: likert_single_stimulus
+      id: lss3
+      name: likert
+      content: <div style="font-size: 26px;">Hör dir das Beispiel an! Aus welchem Bundesland kommt die sprechende Person?</div>
+      showWaveform: false
+      # mustPlayback: ended
+      mustRate: true
+      randomize: false
+      maxStimuli: 1
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/listening_test_wavs/61254_AI_MJ_057.01_5.wav
+      response:
+        -
+          - value: vorarlberg
+            label: Vorarlberg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: tirol
+            label: Tirol
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: salzburg
+            label: Salzburg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: kärnten
+            label: Kärnten
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: steiermark
+            label: Steiermark
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: niederösterreich
+            label: Niederösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: oberösterreich
+            label: Oberösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: burgenland
+            label: Burgenland
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: wien
+            label: Wien
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+
+    - type: likert_single_stimulus
+      id: lss3
+      name: likert
+      content: <div style="font-size: 26px;">Hör dir das Beispiel an! Aus welchem Bundesland kommt die sprechende Person?</div>
+      showWaveform: false
+      # mustPlayback: ended
+      mustRate: true
+      randomize: false
+      maxStimuli: 1
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/TCS_award/2_493.01.wav
+      response:
+        -
+          - value: vorarlberg
+            label: Vorarlberg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: tirol
+            label: Tirol
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: salzburg
+            label: Salzburg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: kärnten
+            label: Kärnten
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: steiermark
+            label: Steiermark
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: niederösterreich
+            label: Niederösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: oberösterreich
+            label: Oberösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: burgenland
+            label: Burgenland
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: wien
+            label: Wien
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+
+    - type: likert_single_stimulus
+      id: lss3
+      name: likert
+      content: <div style="font-size: 26px;">Hör dir das Beispiel an! Aus welchem Bundesland kommt die sprechende Person?</div>
+      showWaveform: false
+      # mustPlayback: ended
+      mustRate: true
+      randomize: false
+      maxStimuli: 1
+      stimuli:
+          C1: configs/resources/audio/DialektDetect/TCS_award/5_030.01.wav
+      response:
+        -
+          - value: vorarlberg
+            label: Vorarlberg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: tirol
+            label: Tirol
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: salzburg
+            label: Salzburg
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: kärnten
+            label: Kärnten
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: steiermark
+            label: Steiermark
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: niederösterreich
+            label: Niederösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: oberösterreich
+            label: Oberösterreich
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: burgenland
+            label: Burgenland
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+          - value: wien
+            label: Wien
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_off.png
+    
+    # - type: spatial
+    #   id: 6_034.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/6_034.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/6_034.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 5_329.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/5_329.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/5_329.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 4_071.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/4_071.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/4_071.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 7_560.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/7_560.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/7_560.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 1_522.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/1_522.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/1_522.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 8_499.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/8_499.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/8_499.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 3_039.01_3
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/3_039.01_3.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/3_039.01_3.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 9_306
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/9_306.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/9_306.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: spatial
+    #   id: 7_567.01
+    #   name: <div style="font-size: 40px;"><b>Woher kommt die sprechende Person?</b> </div>
+    #   content: <div style="font-size: 32px;">Hör dir das Beispiel an und klick auf die Karte.<br>Markiere den wichtigsten Teil im Audio mit den Schiebereglern!
+    #   framerate: 5
+    #   roomMeasurements: [600, 240, 500] # width, height, length
+    #   showWaveform: true
+    #   enableLooping: false
+    #   reference: configs/resources/audio/DialektDetect/TCS_award/7_567.01.wav
+    #   createAnchor35: false
+    #   createAnchor70: false
+    #   stimuli:
+    #       C1: configs/resources/audio/DialektDetect/TCS_award/7_567.01.wav
+    #   responses:
+    #     - type: localization
+    #       name: locA
+    #       label: A
+    #       color: 0xff0000
+    #       stimulus: C1
+    #       position: [100,100,0]
+    #       size: 10
+    #   views: 
+    #     - view: front
+    #   objects: 
+    #     - type: None
+    
+    # - type: finish
+    #   name: Danke fürs Mitmachen!
+    #   content: Bitte füll den Fragebogen aus und klick auf "Ergebnisse senden".
+    #   showResults: false
+    #   writeResults: true
+    #   questionnaire:
+    #       - type: classcode
+    #         label: Klassencode
+    #         name: classcode
+    #       - type: text
+    #         label: Vorname
+    #         name: name
+    #         optional: true
+    #       - type: text
+    #         label: Klasse/Gruppe
+    #         name: class
+    #         optional: true
+    #       - type: likert
+    #         name: gender
+    #         label: Geschlecht
+    #         response:
+    #          - value: female
+    #            label: Weiblich
+    #          - value: male
+    #            label: Männlich
+    #          - value: other
+    #            label: Divers
+    #          - value: none
+    #            label: Keine Angabe
+    #         optional: true
+    #       - type: number
+    #         label: Alter
+    #         name: age
+    #         min: 0
+    #         max: 100
+    #         default: 0
+    #         optional: true
