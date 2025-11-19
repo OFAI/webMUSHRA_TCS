@@ -4,8 +4,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
+    user: "${UID}:${GID}"
     volumes:
-      - ./results:/var/www/html/results
-      - ./configs:/var/www/html/configs
+      - ${WEBMUSHRA_RESULTS}:/var/www/html/results
+      - ${WEBMUSHRA_CONFIGS}:/var/www/html/configs
     ports:
-      - "8000:80"
+      - "30001:80"
+    restart: unless-stopped
