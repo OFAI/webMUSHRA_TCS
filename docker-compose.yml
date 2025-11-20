@@ -8,8 +8,8 @@ services:
       - .env
     user: "${UID}:${GID}"
     volumes:
-      - ${WEBMUSHRA_RESULTS}:/var/www/html/results
-      - ${WEBMUSHRA_CONFIGS}:/var/www/html/configs
+      - ${WEBMUSHRA_RESULTS}:/var/www/html/data/results
+      - ${WEBMUSHRA_CONFIGS}:/var/www/html/data/configs
     ports:
       - "30001:80"
     restart: unless-stopped

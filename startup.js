@@ -221,12 +221,12 @@ function getParameterByName(name) {
 
 var config = null;
 var configArg = getParameterByName("config");
-// var configArg = "TCS.yaml";
-var configFile = '';
+var configArg = "TCS.yaml";
+// var configFile = '';
 if (configArg) {
-  configFile = 'configs/' + configArg;
+  configFile = 'data/configs/' + configArg;
 } else {
-  configFile = 'configs/TCS.yaml';
+  configFile = 'data/configs/TCS.yaml';
 }
 
 
